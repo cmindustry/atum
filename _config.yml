@@ -6,7 +6,7 @@ social:
   RSS: https://cmindustry.github.io/atom.xml
 
 # Background image, color
-background: '#C2C8C2'
+background: 'url(https://s3.ax1x.com/2020/12/13/re2vYq.png) #C2C8C2'
 
 # Favicon
 favicon: 

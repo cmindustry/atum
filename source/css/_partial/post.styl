@@ -1,8 +1,9 @@
 .post
   position: relative
-  border-bottom: 1px dotted #cc0000
+  border: 1px solid transparent
+  border-image: linear-gradient(to right, transparent 30%, #cc0000,transparent 70%) 0 0 1 0 ;
   margin: 0 1em 2em
-  padding: 0 0 2em
+  padding: 0 0 1em
   
   .post-cat
     display: inline-block
@@ -72,7 +73,7 @@
     color: #111
     font-size: 1rem
     line-height: 1.6
-    margin: 1.5em 1.5em 0 0
+    margin: 1.5em 0 0 0
     text-align: left
     a
       color:#111
@@ -83,9 +84,6 @@
       font-weight: 400
       display: block
       width: 100%
-      position: absolute
-      bottom: -32px
-      padding-top: 100px
       text-align: left
       text-decoration: none
       transition: .5s

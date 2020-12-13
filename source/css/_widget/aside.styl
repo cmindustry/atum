@@ -2,6 +2,8 @@
   overflow: hidden
   width: 25%
   float: right
+  padding-left: 20px
+  border-left: 1px solid #C2C8C2
 
 .close
   display: none
@@ -31,31 +33,38 @@
     font: 1.25em/1.2 Sans-Serif
     margin: 0 
     color: #333
-  
   ul
     list-style: none
     margin: 0
-    padding: 0
+    padding: 0    
     li
-      border-top: 1px dotted #ddd
       margin-top: .6em
       padding-top: .6em
       a
         color: #cc0000
         text-decoration: none
         font: 14px Sans-Serif
-        transition: .3s
+        transition: .3s    
         &:hover
           color: #ddd
-            
+      span
+        margin-top: .6em
+        padding-top: .6em
+        color: #cc0000
+        font-size: 0.6em
+        &:before
+          content:"["
+        &:after
+          content:"]"
+
 .aside-section.tag
   li
     display: inline-block
     border: none
     margin: 0 10px 0 0
-    a
-      border: 1px dotted #ddd
-      padding: 4px
+    &:before
+      content:"#"
+      color:#cc0000
 
 @media screen and (max-width: 1015px) 
   .aside
