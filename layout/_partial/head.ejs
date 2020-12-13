@@ -7,67 +7,70 @@
     </title>
     <!-- favicon -->
     <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>" />
-    <% } %> <%- css('css/style.css') %>
+        <link rel="icon" href="<%- theme.favicon %>" />
+        <% } %>
+            <%- css('css/style.css') %>
 
-    <!-- highlight
-    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
-    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad()
-    </script> -->
-    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
+                <!-- highlight -->
+                <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/10.4.1/styles/github-gist.min.css" />
+                <script src="//cdn.bootcss.com/highlight.js/10.4.1/highlight.min.js"></script>
+                <script>
+                    hljs.initHighlightingOnLoad()
+                </script> -->
 
-    <script>
-        infiniteScroll()
 
-        window.addEventListener('DOMContentLoaded', function () {
-            const [
-                mainTitle,
-                mobileMenu,
-                mobileMainTitle,
-                mobileMenuBtn,
-                ipadMenuBtn,
-                aside,
-                closeBtn,
-            ] = getEle(
-                '#main-title',
-                '.mobile-menu',
-                '.mobile-menu h3',
-                '.mobile-menu button',
-                '.ipad-menu',
-                'aside',
-                'aside .close',
-            )
-            const io = new IntersectionObserver(entries => {
-                if (entries[0].intersectionRatio <= 0) {
-                    mobileMainTitle.classList.remove('invisibile')
-                } else {
-                    mobileMainTitle.classList.add('invisibile')
-                }
-            })
-            io.observe(mainTitle)
+                <script src="/js/hexo-infinite-scroll/dist/main.js"></script>
 
-            clickToggleAside(mobileMenuBtn)
-            clickToggleAside(ipadMenuBtn)
-            clickToggleAside(closeBtn, false)
+                <script>
+                    infiniteScroll()
 
-            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
-            if (isMenuVisible) document.body.style.background = 'none'
+                    window.addEventListener('DOMContentLoaded', function() {
+                        const [
+                            mainTitle,
+                            mobileMenu,
+                            mobileMainTitle,
+                            mobileMenuBtn,
+                            ipadMenuBtn,
+                            aside,
+                            closeBtn,
+                        ] = getEle(
+                            '#main-title',
+                            '.mobile-menu',
+                            '.mobile-menu h3',
+                            '.mobile-menu button',
+                            '.ipad-menu',
+                            'aside',
+                            'aside .close',
+                        )
+                        const io = new IntersectionObserver(entries => {
+                            if (entries[0].intersectionRatio <= 0) {
+                                mobileMainTitle.classList.remove('invisibile')
+                            } else {
+                                mobileMainTitle.classList.add('invisibile')
+                            }
+                        })
+                        io.observe(mainTitle)
 
-            function getEle(...args) {
-                return args.map(arg => document.querySelector(arg))
-            }
+                        clickToggleAside(mobileMenuBtn)
+                        clickToggleAside(ipadMenuBtn)
+                        clickToggleAside(closeBtn, false)
 
-            function clickToggleAside(btn, show = true) {
-                btn.addEventListener('click', function () {
-                    if (show) {
-                        aside.style.display = 'block'
-                    } else {
-                        aside.style.display = 'none'
-                    }
-                })
-            }
-        })
-    </script>
+                        const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
+                        if (isMenuVisible) document.body.style.background = 'none'
+
+                        function getEle(...args) {
+                            return args.map(arg => document.querySelector(arg))
+                        }
+
+                        function clickToggleAside(btn, show = true) {
+                            btn.addEventListener('click', function() {
+                                if (show) {
+                                    aside.style.display = 'block'
+                                } else {
+                                    aside.style.display = 'none'
+                                }
+                            })
+                        }
+                    })
+                </script>
 </head>
