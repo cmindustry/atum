@@ -6,9 +6,9 @@
         <%= config.title %>
     </title>
     <!-- favicon -->
-    <% if (theme.favicon){ %>
+    <!-- <% if (theme.favicon){ %>
         <link rel="icon" href="<%- theme.favicon %>" />
-        <% } %>
+        <% } %> -->
             <%- css('css/style.css') %>
 
                 <!-- highlight -->
@@ -22,9 +22,9 @@
                 <script src="/js/hexo-infinite-scroll/dist/main.js"></script>
 
                 <script>
-                    infiniteScroll()
-
                     window.addEventListener('DOMContentLoaded', function() {
+                        infiniteScroll(showNum=10)
+
                         const [
                             mainTitle,
                             mobileMenu,

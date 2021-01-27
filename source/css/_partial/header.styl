@@ -1,7 +1,7 @@
 .header 
   text-align: center
   h1, h2 
-    margin: 0
+    margin-bottom: 2em
     line-height: 1.2
   .title 
     a
@@ -17,27 +17,6 @@
       font: 18px Sans-Serif
       color: #bbb
 
-  .links 
-    height: 40px
-    margin: 2.25em auto 4.5em
-    border: 1px solid transparent
-    border-image: linear-gradient(to right, transparent 35%, #cc0000,transparent 65%) 1 0 1 0 ;
-    font: 300 13px Sans-Serif
-    text-transform: uppercase
-    letter-spacing: 1px
-    ul 
-      text-decoration: none
-      padding: 0
-      li
-        display: inline-block
-        margin: 0 .5em
-        a
-          color: #222
-          text-decoration: none
-          transition: .3s
-          &:hover
-            color: #cc0000
-  
   .ipad-menu
     display: none
     position: fixed
@@ -53,7 +32,7 @@
     padding: 0 1.5em
     height: 3em
     z-index: 1
-    box-shadow: 0px 1px 5px #ddd
+    // box-shadow: 0px 1px 5px #ddd
     h3
       a
         color:#b30000
@@ -63,27 +42,28 @@
         text-shadow: 1px 1px 2px #ddd;
 
   .menu
-    padding: .5em 1em
-    border: 1px solid #fff
-    outline: 5px solid #bbb
-    background: #bbb
-    font: 500 14px Sans-Serif
-    color: #fff
-    text-transform: upperCase
+    padding-right: 0
+    border: none
+    outline: none
+    background: transparent
+    color: #b30000
+    text-shadow: 1px 1px 2px #ddd;
+    // text-transform: upperCase
           
-    &::before 
-      content: '◈'
-      display: inline-block
-      margin-right: 3px
+    // &::before 
+    //   content: '◈'
+    //   display: inline-block
+    //   margin-right: 3px
 
-    &:focus, &:active
-      background: #cc0000
-      outline: 3px solid #cc0000
+    // &:focus, &:active
+    //   background: #cc0000
+    //   outline: 3px solid #cc0000
 
 @media screen and (max-width: 1015px)
   .header
     .ipad-menu
       display: block
+      text-decoration: underline
 
 @media screen and (max-width: 640px) 
   .header 
@@ -98,10 +78,9 @@
       display: flex
       justify-content: space-between
       align-items: center
+
       .menu
-        padding: .2em .5em
-        font: 500 12px Sans-Serif
-        outline: 3px solid #bbb
+        font: 500 1.4em Serif
 
       
       

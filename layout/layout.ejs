@@ -19,6 +19,20 @@
             <section class="aside-section tag">
                 <%- partial('_widget/tag') %>
             </section>
+            <section class="aside-section instruc">
+                <%= config.description %>
+            </section>
+            <div class="links">
+                <ul>
+                    <% for (name in theme.social) { %>
+                    <li>
+                        <a href="<%- url_for(theme.social[name]) %>">
+                            <%- name %>
+                        </a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
         </aside>
     </div>
 </body>
